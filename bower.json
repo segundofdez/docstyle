@@ -1,0 +1,6 @@
+{
+    "name":"styleguide",
+    "dependencies": {
+        "reticulas-cssframework": "~3.3.4"
+    }
+}

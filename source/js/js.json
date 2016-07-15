@@ -1,0 +1,6 @@
+{
+   "js" :
+    [
+        { "src" : "source/js/main.js" }
+    ]
+}

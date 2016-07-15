@@ -1,0 +1,58 @@
+
+// MAIN NAV
+.nav{
+    position: fixed;
+    top:52px;
+    left:-@nav-width;
+    width: @nav-width;
+    height: 100%;
+    background-color:@color-main-light;
+    border-right:1px solid @color-main-medium;
+    overflow-y: scroll;
+    transition: all ease-in-out .5s;
+    @media (min-width: @screen-m){
+        left: 0;
+    }
+    > ul{
+        list-style-type: none;
+        padding: 1.25em;
+        margin: 0;
+        margin-bottom: 3em;
+        .font-size(14);
+        >li{
+            a{
+                border-bottom:1px solid @color-main-medium;
+                color: @color-main;
+                    &:hover{
+                        color: @color-main-dark;
+                    }
+            }
+        }
+        a{
+            padding: .65em 0;
+            display: block;
+            text-decoration: none;
+            transition: all ease-in-out .125s;
+            &:hover{
+                margin-left: .5em;
+            }
+        }
+        ul{
+            padding-left: 2em;
+            margin: 0;
+            list-style-type: none;
+            li{
+                a{
+                    border-bottom-width:0;
+                    color: @color-main-dark;
+                    &:before{
+                        content: "- ";
+                    }
+                    &:hover{
+                        color: @color-main;
+                    }
+                }
+            }
+        }
+    }
+}
