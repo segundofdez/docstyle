@@ -1,7 +1,7 @@
 ## Getting Started
 Welcome to style guide basic template. The purpose of this project is to offer a simple layout to make style guides using markdown files.
 
-### How to use
+### Install
 1. Download de last version of Styleguide Template
 2. composer install
 3. bower install
@@ -23,7 +23,32 @@ $data = [
 ];
 ```
 
+Add the routes in your template **source/templates**
+```html
+[...]
+<nav class="nav js-sticky">
+    <ul>
+        <li><a href="#getting-started">Getting Started</a></li>
+    </ul>
+</nav>
+[...]
+<div id="getting-started">
+    <?php echo $getting_started; ?>
+</div>
+[...]
+```
 ### Start
 Add your markdow files to **source/data**.
 If you need a diferent skin, you can modify the styles in **source/styles**.
+
+### Gulp
+
+#### gulp watch
+Watch changes on .js and .less files.
+
+#### gulp less
+Compile styles to css.
+
+#### gulp js
+Minimize js.
 
