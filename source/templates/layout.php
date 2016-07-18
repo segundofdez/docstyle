@@ -9,7 +9,16 @@
         <!-- Mobile viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- Favicon 32x32px -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Apple-touch-icon.png 182×182px-->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <!-- Styles -->
         <link rel="stylesheet" href="/css/main.min.css">
+
+        <!-- js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
