@@ -19,10 +19,11 @@
         margin: 0;
         margin-bottom: 3em;
         .font-size(14);
-        >li{
+        > li{
             a{
                 border-bottom:1px solid @color-main-medium;
                 color: @color-main;
+                font-weight: 700;
                     &:hover{
                         color: @color-main-dark;
                     }
@@ -38,12 +39,15 @@
             }
         }
         ul{
-            padding-left: 2em;
             margin: 0;
+            padding:0;
             list-style-type: none;
             li{
                 a{
-                    border-bottom-width:0;
+                    font-weight: 400;
+                    .font-size(13);
+                    padding-left: .75em;
+                    border-bottom:1px solid @color-main-medium;
                     color: @color-main-dark;
                     &:before{
                         content: "- ";

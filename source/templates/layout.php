@@ -33,7 +33,9 @@
 
                 <nav class="nav js-sticky">
                     <ul>
-                        <li><a href="#getting-started">Getting Started</a></li>
+                        <li>
+                            <a href="#getting-started">Getting Started</a>
+                        </li>
                     </ul>
                 </nav>
             </header>
