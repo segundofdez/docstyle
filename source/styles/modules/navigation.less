@@ -1,60 +1,54 @@
 
 // MAIN NAV
-.nav{
+.nav {
     position: fixed;
-    top:52px;
-    left:-@nav-width;
+    top: @header-height;
+    left: -@nav-width;
     width: @nav-width;
     height: 100%;
-    background-color:@color-main-light;
-    border-right:1px solid @color-main-medium;
+    background-color: @color-main-light;
+    border-right: 1px solid @color-main-medium;
     overflow-y: scroll;
     transition: all ease-in-out .5s;
     @media (min-width: @screen-m){
         left: 0;
     }
-    > ul{
+    ul {
         list-style-type: none;
-        padding: 1.25em;
         margin: 0;
-        margin-bottom: 3em;
-        .font-size(14);
-        > li{
-            a{
-                border-bottom:1px solid @color-main-medium;
-                color: @color-main;
-                font-weight: 700;
-                    &:hover{
-                        color: @color-main-dark;
-                    }
+        padding: 0;
+        li {
+            a {
+                display: block;
+                border-bottom: 1px solid @color-main-medium;
+                text-decoration: none;
+                transition: all ease-in-out .125s;
+                &:hover{
+                    color: @color-main-dark;
+                }
             }
         }
+    }
+    > ul {
+        padding: 1.25em;
+        margin-bottom: 3em;
+        .font-size(14);
         a{
+            color: @color-main;
+            font-weight: 700;
             padding: .65em 0;
-            display: block;
-            text-decoration: none;
-            transition: all ease-in-out .125s;
-            &:hover{
+            &:hover {
                 margin-left: .5em;
             }
         }
-        ul{
-            margin: 0;
-            padding:0;
-            list-style-type: none;
-            li{
-                a{
-                    font-weight: 400;
-                    .font-size(13);
-                    padding-left: .75em;
-                    border-bottom:1px solid @color-main-medium;
-                    color: @color-main-dark;
-                    &:before{
-                        content: "- ";
-                    }
-                    &:hover{
-                        color: @color-main;
-                    }
+        ul {
+            a{
+                padding-left: .75em;
+                font-weight: 400;
+                .font-size(13);
+                color: @color-main-dark;
+                &:hover{
+                    color: @color-main;
                 }
             }
         }
