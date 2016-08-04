@@ -1,80 +1,85 @@
-
+/* Generic */
 * {
     box-sizing: border-box;;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     min-height: 100%;
 }
 
-code{
+code {
     font-family: 'Roboto Mono', monospace;
 }
 
 
-
-// CONTENT
-.content{
-    max-width: 800px;
+/* Main content */
+.content {
     margin-left: 0;
     padding: 0 1em 1em;
     transition: all ease-in-out .5s;
     line-height: 1.5em;
-    @media (min-width: @screen-m){
+    @media (min-width: @screen-m) {
         margin-left: @nav-width;
         padding: 0 2em 1em;
     }
-    >div {
-        margin-bottom: 6em;
-    }
-    // fix anchor id links
-    div:target:before {
-        display:block;
-        content:"";
-        height:53px;
-        margin-top:-53px;
+
+    img {
+        width: 100%;
+        max-width: auto;
     }
 
-    h2{
-        margin-top: 2em;
+    >div {
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: @header-height;
+    }
+
+    h2 {
         margin-bottom: .25em;
         padding-bottom: .5em;
         border-bottom: 1px solid @color-main-medium;
     }
-    h3, h4{
+
+    h3 {
+        margin-top: 2em;
+    }
+
+    h3, h4 {
         margin-bottom: .5em;
     }
+
     h3 + p,
     h4 + p,
-    h3 + ul{
+    h3 + ul {
         margin-top: 0em;
     }
 
-    p, ul, ol{
+    p, ul, ol {
         color: @color-main-dark;
     }
-    ul, ol{
+    ul, ol {
         margin-left: -1.5em;
     }
-    a{
+
+    a {
         color: @color-link;
-        &:hover{
+        &:hover {
             color: @color-main;
         }
     }
 
-    table{
+    table {
         width: 100%;
         border-collapse: collapse;
         text-align: left;
-        thead th{
+        thead th {
             padding-top: .5em;
             padding-right: 1em;
             padding-bottom: .5em;
             border-bottom: 1px solid @color-main-medium;
         }
-        td{
+        td {
             padding-top: .5em;
             padding-right: 1em;
             padding-bottom: .5em;
@@ -82,7 +87,7 @@ code{
         }
     }
 
-    pre{
+    pre {
         .font-size(13);
         white-space: pre;
         white-space: pre-wrap;

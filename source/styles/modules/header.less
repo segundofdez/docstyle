@@ -1,9 +1,10 @@
-// HEADER
+/* header */
 .header{
     position: sticky;
-    top:0;
+    width: 100%;
+    top: 0;
     padding: 1em;
-    border-bottom:1px solid @color-main-medium;
+    border-bottom: 1px solid @color-main-medium;
     background-color: white;
 }
 
@@ -16,7 +17,7 @@
 @ia16-horizontal-top: translate(@ia16-start, @ia16-align-start);
 @ia16-horizontal-center: translate(@ia16-start, @ia16-center);
 @ia16-horizontal-bottom: translate(@ia16-start, @ia16-align-end);
-.svg-menu{
+.navicon {
     position: absolute;
     right: 1em;
     top: .55em;
@@ -38,15 +39,15 @@
                 transform: @ia16-horizontal-bottom;
             }
         }
-        @media (min-width: @screen-m){
+        @media (min-width: @screen-m) {
             display: none;
         }
     }
 }
 /* state navigation */
-@media (max-width: @screen-m){
+@media (max-width: @screen-m) {
     .has-mobile-menu{
-        .svg-menu {
+        .navicon {
             svg{
                 line {
                     &:nth-child(1) {
@@ -70,10 +71,13 @@
 /* logo */
 .logo{
     .font-size(16);
-    margin:0;
+    margin: 0;
     color: @color-corp;
     a{
-        text-decoration:none;
+        text-decoration: none;
         color: @color-corp;
+    }
+    span{
+        font-weight: 400;
     }
 }

@@ -1,5 +1,4 @@
-
-// MAIN NAV
+/* navigation */
 .nav {
     position: fixed;
     top: @header-height;
@@ -10,7 +9,8 @@
     border-right: 1px solid @color-main-medium;
     overflow-y: scroll;
     transition: all ease-in-out .5s;
-    @media (min-width: @screen-m){
+    z-index: 2;
+    @media (min-width: @screen-m) {
         left: 0;
     }
     ul {
@@ -23,8 +23,17 @@
                 border-bottom: 1px solid @color-main-medium;
                 text-decoration: none;
                 transition: all ease-in-out .125s;
-                &:hover{
+                &:hover {
                     color: @color-main-dark;
+                }
+                position: relative;
+                &.is-active {
+                    &:after {
+                        position: absolute;
+                        right: 0;
+                        content: "»";
+                        .font-size(16);
+                    }
                 }
             }
         }
@@ -42,12 +51,12 @@
             }
         }
         ul {
-            a{
+            a {
                 padding-left: .75em;
                 font-weight: 400;
                 .font-size(13);
                 color: @color-main-dark;
-                &:hover{
+                &:hover {
                     color: @color-main;
                 }
             }

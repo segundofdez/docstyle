@@ -1,6 +1,9 @@
 {
    "js" :
     [
+        { "src" : "bower_components/jQuery/dist/jquery.min.js" },
+        { "src" : "bower_components/Stickyfill/dist/stickyfill.min.js" },
+        { "src" : "bower_components/highlightjs/highlight.pack.min.js" },
         { "src" : "source/js/main.js" }
     ]
 }
