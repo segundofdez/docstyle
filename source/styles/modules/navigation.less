@@ -24,6 +24,7 @@
                 border-bottom: 1px solid @color-main-medium;
                 text-decoration: none;
                 transition: all ease-in-out .125s;
+                padding-right: 1em;
                 &:hover {
                     color: @color-main-dark;
                 }
@@ -31,6 +32,8 @@
                     &:after {
                         position: absolute;
                         right: 0;
+                        top:50%;
+                        transform: translateY(-50%);
                         content: "»";
                         .font-size(16);
                     }
