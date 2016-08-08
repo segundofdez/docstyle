@@ -49,12 +49,18 @@ php -S localhost:8888 -t public
 
 ### Gulp
 
-#### gulp watch
-Watch changes on .js and .less files.
+Watch changes on .js and .less files:
+```bash
+gulp watch
+```
 
-#### gulp less
-Compile styles to css.
+Compile styles to css:
+```bash
+gulp less
+```
 
-#### gulp js
-Minimize js.
+Minimize js:
+```bash
+gulp js
+```
 
