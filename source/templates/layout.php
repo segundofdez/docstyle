@@ -28,7 +28,7 @@
                 <h1 class="logo"><a href="<?php echo $home;?>"><?php echo $title; ?> <span><?php echo $version; ?></span></a></h1>
 
                 <div class="navicon js-navicon">
-                    <svg viewBox="0 0 16 16">
+                    <svg viewBox="0 0 14 14">
                         <line x1="0" x2="14" y1="0" y2="0"/>
                         <line x1="0" x2="14" y1="0" y2="0"/>
                         <line x1="0" x2="14" y1="0" y2="0"/>
