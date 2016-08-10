@@ -49,14 +49,14 @@ php -S localhost:8888 -t public
 
 ### Gulp
 
+Start a php server:
+```bash
+gulp connect
+```
+
 Watch changes on .js and .less files:
 ```bash
 gulp watch
-```
-
-Generate static html from php files:
-```bash
-gulp static
 ```
 
 Compile styles to css:
@@ -67,5 +67,10 @@ gulp less
 Minimize js:
 ```bash
 gulp js
+```
+
+Generate static html from php files:
+```bash
+gulp static
 ```
 

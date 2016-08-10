@@ -16,7 +16,10 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
 
     // generate static html from php
-    php2html = require("gulp-php2html");
+    php2html = require("gulp-php2html"),
+
+    // php server
+    connect = require('gulp-connect-php');
 
 
 /**
@@ -27,6 +30,17 @@ function swallowError (error) {
     this.emit('end');
 }
 
+/**
+* Task connect start a php server
+*/
+gulp.task('connect', function() {
+    connect.server({
+        base: 'public',
+        hostname: 'localhost',
+        port: 8888,
+        keepalive: true
+    });
+});
 
 /**
 * Task less: less, errors, autoprefixer, minified, rename, notify, sourcemaps and browserSync
