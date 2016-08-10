@@ -41,12 +41,6 @@ Add the routes in your template **source/templates**
 Add your markdow files to **source/data**.
 If you need a diferent skin, you can modify the styles in **source/styles**.
 
-Run php on localhost
-```bash
-cd styleguide
-php -S localhost:8888 -t public
-```
-
 ### Gulp
 
 Start a php server:
@@ -59,7 +53,7 @@ Watch changes on .js and .less files:
 gulp watch
 ```
 
-Compile styles to css:
+Compile, minified and autoprefix styles to css:
 ```bash
 gulp less
 ```
