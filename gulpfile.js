@@ -6,14 +6,17 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
 
     // styles
-    less = require('gulp-less');
+    less = require('gulp-less'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
 
     // js
     concat = require('gulp-concat'),
     fs = require('fs'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+
+    // generate static html from php
+    php2html = require("gulp-php2html");
 
 
 /**
@@ -67,6 +70,18 @@ gulp.task('js', function () {
         .pipe(gulp.dest(dest_folder))
         .pipe(notify({message:"Compress js"})
     );
+});
+
+/**
+* Task static generate static html files from php
+*/
+gulp.task('static', function () {
+    var static_src_import = 'public/*.php';
+    var static_dest_folder = 'public';
+
+    return gulp.src(static_src_import)
+        .pipe(php2html())
+        .pipe(gulp.dest(static_dest_folder));
 });
 
 

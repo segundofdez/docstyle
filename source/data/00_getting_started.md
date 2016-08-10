@@ -54,6 +54,11 @@ Watch changes on .js and .less files:
 gulp watch
 ```
 
+Generate static html from php files:
+```bash
+gulp static
+```
+
 Compile styles to css:
 ```bash
 gulp less

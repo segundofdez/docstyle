@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Style Guide</title>
+        <meta name="description" content="Basic template for styleguides or documentation">
+
+        <!-- Mobile viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon 32x32px -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Apple-touch-icon.png 182×182px-->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/main.min.css">
+
+        <!-- js -->
+        <script src="js/main.min.js"></script>
+    </head>
+    <body>
+        <div class="page">
+
+            <header class="header js-sticky">
+                <h1 class="logo"><a href="/">Style Guide <span>1.0.0</span></a></h1>
+
+                <div class="navicon js-navicon">
+                    <svg viewBox="0 0 14 14">
+                        <line x1="0" x2="14" y1="0" y2="0"/>
+                        <line x1="0" x2="14" y1="0" y2="0"/>
+                        <line x1="0" x2="14" y1="0" y2="0"/>
+                    </svg>
+                </div>
+
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="#getting-started">Getting Started</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="content">
+
+                <div id="getting-started">
+                    <h2>Getting Started</h2>
+<p>Welcome to style guide basic template. The purpose of this project is to offer a simple layout to make style guides or simple documentations using markdown files.</p>
+<h3>Install</h3>
+<ol>
+<li>Download de latest version of Styleguide</li>
+<li>composer install</li>
+<li>bower install</li>
+<li>npm install</li>
+</ol>
+<h3>Configure</h3>
+<p>You can configure some parameters like sitename, lang, description... in <strong>public/index.php</strong>. Also you can configure your .md files routes.</p>
+<pre><code class="language-php">$data = [
+
+    'home' =&gt; $home,
+    'lang' =&gt; 'en',
+    'title' =&gt; 'Style Guide',
+    'description' =&gt; 'Basic template for styleguides or documentation',
+    'version' =&gt; '1.0.0',
+    'getting_started' =&gt; $parse-&gt;text( file_get_contents( $data_dir . '00_getting_started.md') ),
+
+];</code></pre>
+<p>Add the routes in your template <strong>source/templates</strong></p>
+<pre><code class="language-html">[...]
+&lt;nav class="nav"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#getting-started"&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+[...]
+&lt;div id="getting-started"&gt;
+    &lt;?php echo $getting_started; ?&gt;
+&lt;/div&gt;
+[...]</code></pre>
+<h3>Start</h3>
+<p>Add your markdow files to <strong>source/data</strong>.
+If you need a diferent skin, you can modify the styles in <strong>source/styles</strong>.</p>
+<p>Run php on localhost</p>
+<pre><code class="language-bash">cd styleguide
+php -S localhost:8888 -t public</code></pre>
+<h3>Gulp</h3>
+<p>Watch changes on .js and .less files:</p>
+<pre><code class="language-bash">gulp watch</code></pre>
+<p>Generate static html from php files:</p>
+<pre><code class="language-bash">gulp static</code></pre>
+<p>Compile styles to css:</p>
+<pre><code class="language-bash">gulp less</code></pre>
+<p>Minimize js:</p>
+<pre><code class="language-bash">gulp js</code></pre>                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

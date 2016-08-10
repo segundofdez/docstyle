@@ -16,10 +16,10 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="/css/main.min.css">
+        <link rel="stylesheet" href="css/main.min.css">
 
         <!-- js -->
-        <script src="/js/main.min.js"></script>
+        <script src="js/main.min.js"></script>
     </head>
     <body>
         <div class="page">

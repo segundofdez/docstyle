@@ -9,6 +9,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.1",
     "run-sequence": ">=1.1.5",
-    "gulp-watch": "^4.3.5"
+    "gulp-watch": "^4.3.5",
+    "gulp-php2html": "0.3.2"
   }
 }
