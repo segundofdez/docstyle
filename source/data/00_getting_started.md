@@ -43,14 +43,9 @@ If you need a diferent skin, you can modify the styles in **source/styles**.
 
 ### Gulp
 
-Start a php server and browser-sync:
+Start a php server, browser-sync, watch changes on .less, .php, .md and .js:
 ```bash
 gulp connect
-```
-
-Watch changes on .js and .less files:
-```bash
-gulp watch
 ```
 
 Compile, minified and autoprefix styles to css:
