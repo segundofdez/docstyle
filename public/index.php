@@ -24,8 +24,8 @@ $data = [
 
     'home' => $home,
     'lang' => 'en',
-    'title' => 'Style Guide',
-    'description' => 'Basic template for styleguides or documentation',
+    'title' => 'docstyle',
+    'description' => 'Basic template for styleguides or documentations using markdown',
     'version' => '1.0.0',
     'getting_started' => $parse->text( file_get_contents( $data_dir . '00_getting_started.md') ),
 
