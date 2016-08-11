@@ -19,7 +19,10 @@ var gulp = require('gulp'),
     php2html = require("gulp-php2html"),
 
     // php server
-    connect = require('gulp-connect-php');
+    connect = require('gulp-connect-php'),
+
+    //broser syncronization
+    browserSync = require('browser-sync');
 
 
 /**
@@ -31,16 +34,18 @@ function swallowError (error) {
 }
 
 /**
-* Task connect start a php server
+* Task connect start a php server and browser sync
 */
 gulp.task('connect', function() {
-    connect.server({
-        base: 'public',
-        hostname: 'localhost',
-        port: 8888,
-        keepalive: true
+    connect.server({base: 'public'}, function (){
+        browserSync({
+            proxy: '127.0.0.1:8000'
+        });
     });
+
+    gulp.start('watch');
 });
+
 
 /**
 * Task less: less, errors, autoprefixer, minified, rename, notify, sourcemaps and browserSync
@@ -56,12 +61,12 @@ gulp.task('less', function () {
         .on('error', swallowError)
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
         .pipe(minifycss(minOpts))
-        //.pipe(sourcemaps.init())
         .pipe(rename({
             suffix: '.min'
         }))
         .pipe(gulp.dest(less_dest_folder))
         .pipe(notify("Less compiled, prefixed and minified"))
+        .pipe(browserSync.stream());
 });
 
 
@@ -83,6 +88,7 @@ gulp.task('js', function () {
         .pipe(uglify())
         .pipe(gulp.dest(dest_folder))
         .pipe(notify({message:"Compress js"})
+        .pipe(browserSync.stream())
     );
 });
 
@@ -105,4 +111,6 @@ gulp.task('static', function () {
 gulp.task('watch', function () {
     gulp.watch(['source/styles/**/*.less'], ['less']);
     gulp.watch(['source/js/main.js', 'source/js/js.json'], ['js']);
+    gulp.watch('source/templates/*.php', browserSync.reload);
+    gulp.watch('source/data/**/*.md', browserSync.reload);
 });

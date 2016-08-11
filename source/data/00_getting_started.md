@@ -43,7 +43,7 @@ If you need a diferent skin, you can modify the styles in **source/styles**.
 
 ### Gulp
 
-Start a php server:
+Start a php server and browser-sync:
 ```bash
 gulp connect
 ```
