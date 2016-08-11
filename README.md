@@ -1,6 +1,7 @@
-![Docstyle logo](https://github.com/segundofdez/docstyle/blob/4e2f205daa311d718fa5326d3d7b3b5962c7df17/public/img/logo.png)
 #docstyle
 Welcome to docstyle basic template. The purpose of this project is to offer a simple layout to make style guides or simple documentations using markdown files.
+
+![Docstyle logo](https://github.com/segundofdez/docstyle/blob/4e2f205daa311d718fa5326d3d7b3b5962c7df17/public/img/logo.png)
 
 ## Install
 1. Download de latest version of docstyle
