@@ -1,4 +1,4 @@
-![Docstyle logo](/img/logo.png)
+![Docstyle logo](img/logo.png)
 
 ## Getting Started
 Welcome to docstyle basic template. The purpose of this project is to offer a simple layout to make style guides or simple documentations using markdown files.
