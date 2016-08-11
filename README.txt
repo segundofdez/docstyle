@@ -41,14 +41,29 @@ Add the routes in your template **source/templates**
 Add your markdow files to **source/data**.
 If you need a diferent skin, you can modify the styles in **source/styles**.
 
+### Start
+Add your markdow files to **source/data**.
+If you need a diferent skin, you can modify the styles in **source/styles**.
+
 ## Gulp
 
-### gulp watch
-Watch changes on .js and .less files.
+Start a php server, browser-sync, watch changes on .less, .php, .md and .js:
+```bash
+gulp connect
+```
 
-### gulp less
-Compile styles to css.
+Compile, minified and autoprefix styles to css:
+```bash
+gulp less
+```
 
-### gulp js
-Minimize js.
+Minimize js:
+```bash
+gulp js
+```
+
+Generate static html from php files:
+```bash
+gulp static
+```
 
